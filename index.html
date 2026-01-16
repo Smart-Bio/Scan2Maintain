@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scan2Maintain</title>
+<title>Biomedical Asset QR Scanner</title>
 
 <style>
 body {
@@ -81,7 +81,7 @@ legend {
   <img src="logo.jpg" alt="Company Logo">
 </div>
 
-<h2>Scan2Maintain</h2>
+<h2>Biomedical Asset QR Scanner</h2>
 
 <div id="reader"></div>
 <div id="assetCard" class="card" style="display:none;"></div>
@@ -90,7 +90,7 @@ legend {
 
 <script>
 const SHEET_URL =
-"https://script.google.com/macros/s/AKfycbyyBTcR-thYuPiDAUz-9iGxMyMPwv7uv748Gpz2LZnU2ma3CQnwHqcnwraIDTuV3UXrlA/exec
+"https://opensheet.elk.sh/1dULGqA1if8CIroCKIWznYAKujZB9bPr2lCBAhQZmOfY/Sheet2";
 
 const assetCard = document.getElementById("assetCard");
 
@@ -154,7 +154,7 @@ function showAsset(a) {
     <button class="btn" onclick="openPDF('${a.Installation_PDF}')">Installation Report</button>
     <button class="btn" onclick="openPDF('${a.PMS_PDF}')">PMS Report</button>
     <button class="btn" onclick="openPDF('${a.Calibration_PDF}')">Calibration Report</button>
-    <button class="btn" onclick="openBreakdownForm('${a.Asset_No}')">Raise Breakdown Complaint</button>
+    <button class="btn" onclick="openBreakdownForm('${a.Asset_No}')">Raise Breakdown Complain</button>
 
   `;
   assetCard.style.display = "block";
@@ -178,29 +178,7 @@ Html5Qrcode.getCameras().then(cams => {
 });
 </script>
 
-  <script>
-function raiseBreakdown(assetId, equipment, department) {
-
-  const problem = prompt("Enter problem");
-  if (!problem) return;
-
-  fetch("https://https://script.google.com/macros/s/AKfycby_ptwlVuCZlwkec3S-j-2YBvZanWMalh3-JMagb9DRvfLgbTAju9DE204HgLE-J2npVg/exec", {
-    method: "POST",
-    body: JSON.stringify({
-      assetId: assetId,
-      equipment: equipment,
-      department: department,
-      problem: problem,
-      priority: priority,
-      reportedBy: "Staff Nurse",
-      empCode: "EMP001"
-    })
-  })
-  .then(() => alert("Breakdown complaint registered"));
-}
-</script>
-
-  <script>
+<script>
 function openBreakdownForm(assetId) {
   window.open(
     "breakdown_form.html?asset=" + assetId,
@@ -213,11 +191,5 @@ function openBreakdownForm(assetId) {
 </html>
 
 
-
-
-
-
-
-
-
-
+</body>
+</html>
