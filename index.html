@@ -154,7 +154,7 @@ function showAsset(a) {
     <button class="btn" onclick="openPDF('${a.Installation_PDF}')">Installation Report</button>
     <button class="btn" onclick="openPDF('${a.PMS_PDF}')">PMS Report</button>
     <button class="btn" onclick="openPDF('${a.Calibration_PDF}')">Calibration Report</button>
-    <button class="btn" onclick="openPDF('${a.Breakdown_PDF}')">Breakdown Report</button>
+    <button class="btn" onclick="openBreakdownForm()">Raise Breakdown Complaint</button>
   `;
   assetCard.style.display = "block";
 }
@@ -203,6 +203,7 @@ function raiseBreakdown(assetId, equipment, department) {
 
 </body>
 </html>
+
 
 
 
