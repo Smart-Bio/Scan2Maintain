@@ -57,7 +57,16 @@ button {
 
 <script>
 const urlParams = new URLSearchParams(window.location.search);
-document.getElementById("assetId").value = urlParams.get("asset");
+
+document.getElementById("assetId").value =
+  urlParams.get("asset");
+
+document.getElementById("equipment").value =
+  urlParams.get("equipment");
+
+document.getElementById("department").value =
+  urlParams.get("department");
+</script>
 
 function submitForm() {
 
@@ -80,5 +89,6 @@ function submitForm() {
 
 </body>
 </html>
+
 
 
