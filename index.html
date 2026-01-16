@@ -90,7 +90,7 @@ legend {
 
 <script>
 const SHEET_URL =
-"https://opensheet.elk.sh/1dULGqA1if8CIroCKIWznYAKujZB9bPr2lCBAhQZmOfY/Sheet2";
+"https://opensheet.elk.sh/1dULGqA1if8CIroCKIWznYAKujZB9bPr2lCBAhQZmOfY/Asset_Master";
 
 const assetCard = document.getElementById("assetCard");
 
@@ -184,8 +184,6 @@ function raiseBreakdown(assetId, equipment, department) {
   const problem = prompt("Enter problem");
   if (!problem) return;
 
-  const priority = prompt("Priority (Low / Medium / High)", "High");
-
   fetch("https://https://script.google.com/macros/s/AKfycby_ptwlVuCZlwkec3S-j-2YBvZanWMalh3-JMagb9DRvfLgbTAju9DE204HgLE-J2npVg/exec", {
     method: "POST",
     body: JSON.stringify({
@@ -204,6 +202,7 @@ function raiseBreakdown(assetId, equipment, department) {
 
 </body>
 </html>
+
 
 
 
