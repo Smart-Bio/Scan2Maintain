@@ -179,20 +179,17 @@ Html5Qrcode.getCameras().then(cams => {
 </script>
 
 <script>
-function openBreakdownForm(assetId, equipment, department) {
-
-  const url =
-    "breakdown_form.html" +
-    "?asset=" + encodeURIComponent(assetId) +
-    "&equipment=" + encodeURIComponent(equipment) +
-    "&department=" + encodeURIComponent(department);
-
-  window.open(url, "_blank");
+function openBreakdownForm(assetId) {
+  window.open(
+    "breakdown_form.html?asset=" + assetId,
+    "_blank"
+  );
 }
 </script>
 
 </body>
 </html>
+
 
 
 
