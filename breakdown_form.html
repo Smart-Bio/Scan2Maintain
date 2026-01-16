@@ -66,10 +66,12 @@ document.getElementById("department").value =
 
 function submitForm() {
 
-  fetch("https://script.google.com/macros/s/AKfycbzS9cgGjjr6gr4vZCW8Cyc3SSb2GYSbHnXs1WGiTqamI1gYIos1V68REoEZkfrc13R7Ww/exec", {
+  fetch("PASTE_WEB_APP_URL_HERE", {
     method: "POST",
     body: JSON.stringify({
       assetId: document.getElementById("assetId").value,
+      equipment: document.getElementById("equipment").value,
+      department: document.getElementById("department").value,
       priority: document.getElementById("priority").value,
       problem: document.getElementById("problem").value,
       reportedBy: document.getElementById("reportedBy").value,
@@ -85,6 +87,7 @@ function submitForm() {
 
 </body>
 </html>
+
 
 
 
