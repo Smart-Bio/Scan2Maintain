@@ -177,7 +177,32 @@ Html5Qrcode.getCameras().then(cams => {
 });
 </script>
 
+  <script>
+function raiseBreakdown(assetId, equipment, department) {
+
+  const problem = prompt("Enter problem");
+  if (!problem) return;
+
+  const priority = prompt("Priority (Low / Medium / High)", "High");
+
+  fetch("https://script.google.com/macros/s/AKfycbzmdLDEkGhyYBhPCur67W_9MZ_kMYQZpRLLJXfTFUe87SOijE8zQK-iED7ik-zWjWz6aA/exec", {
+    method: "POST",
+    body: JSON.stringify({
+      assetId: assetId,
+      equipment: equipment,
+      department: department,
+      problem: problem,
+      priority: priority,
+      reportedBy: "Staff Nurse",
+      empCode: "EMP001"
+    })
+  })
+  .then(() => alert("Breakdown complaint registered"));
+}
+</script>
+
 </body>
 </html>
+
 
 
