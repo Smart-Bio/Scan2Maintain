@@ -154,7 +154,9 @@ function showAsset(a) {
     <button class="btn" onclick="openPDF('${a.Installation_PDF}')">Installation Report</button>
     <button class="btn" onclick="openPDF('${a.PMS_PDF}')">PMS Report</button>
     <button class="btn" onclick="openPDF('${a.Calibration_PDF}')">Calibration Report</button>
-    <button class="btn" onclick="openBreakdownForm('${a.Asset_No}')"Raise Breakdown Complain</button>
+    <button class="btn"onclick="window.open('YOUR_WEBAPP_URL?page=complaint&asset='+a.Asset_No)">Report Breakdow</button>
+
+    <button class="btn"onclick="window.open('YOUR_WEBAPP_URL?page=close&asset='+a.Asset_No)">Close Breakdown</button>
 
    `;
   assetCard.style.display = "block";
@@ -189,6 +191,7 @@ function openBreakdownForm(assetId) {
 
 </body>
 </html>
+
 
 
 
