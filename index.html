@@ -154,8 +154,8 @@ function showAsset(a) {
     <button class="btn" onclick="openPDF('${a.Installation_PDF}')">Installation Report</button>
     <button class="btn" onclick="openPDF('${a.PMS_PDF}')">PMS Report</button>
     <button class="btn" onclick="openPDF('${a.Calibration_PDF}')">Calibration Report</button>
-    <button class="btn"onclick="window.open(https://script.google.com/macros/s/AKfycbxZqi_b2FLiznk3-ZAnkXH4-R-n0X7UL0NlfycuiSjd5_YcQLCh59EvHPR6hv11d6s/exec)">Report Breakdown</button>
-    <button class="btn"onclick="window.open(https://script.google.com/macros/s/AKfycbxZqi_b2FLiznk3-ZAnkXH4-R-n0X7UL0NlfycuiSjd5_YcQLCh59EvHPR6hv11d6s/exec)">Close Breakdown</button>
+    <button class="btn" onclick="window.open('https://script.google.com/macros/s/AKfycbxZqi_b2FLiznk3-ZAnkXH4-R-n0X7UL0NlfycuiSjd5_YcQLCh59EvHPR6hv11d6s/exec?page=complaint&asset='+a.Asset_No)">Report Breakdown</button>
+    <button class="btn" onclick="window.open('https://script.google.com/macros/s/AKfycbxZqi_b2FLiznk3-ZAnkXH4-R-n0X7UL0NlfycuiSjd5_YcQLCh59EvHPR6hv11d6s/exec?page=close&asset='+a.Asset_No)">Close Breakdown</button>
 
   `;
   assetCard.style.display = "block";
@@ -182,6 +182,7 @@ Html5Qrcode.getCameras().then(cams => {
 </body>
 </html>
   
+
 
 
 
