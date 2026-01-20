@@ -134,22 +134,6 @@ function showAsset(a) {
     <div class="row"><div class="label">Make</div><div class="colon">:</div><div class="value">${a.Make}</div></div>
     <div class="row"><div class="label">Serial No</div><div class="colon">:</div><div class="value">${a.Serial_No}</div></div>
 
-    <fieldset>
-      <legend>PMS</legend>
-      <div class="row"><div class="label">Done On</div><div class="colon">:</div><div class="value">${a.PMS_Done_On || "—"}</div></div>
-      <div class="row"><div class="label">Due On</div><div class="colon">:</div>
-        <div class="value ${getStatus(a.PMS_Done_On, 180)}">${a.PMS_Due_On || "—"}</div>
-      </div>
-    </fieldset>
-
-    <fieldset>
-      <legend>Calibration</legend>
-      <div class="row"><div class="label">Done On</div><div class="colon">:</div><div class="value">${a.Calibration_Done_On || "—"}</div></div>
-      <div class="row"><div class="label">Due On</div><div class="colon">:</div>
-        <div class="value ${getStatus(a.Calibration_Done_On, 365)}">${a.Calibration_Due_On || "—"}</div>
-      </div>
-    </fieldset>
-
     <hr>
 
     <button class="btn" onclick="window.open('https://script.google.com/macros/s/AKfycbxgcMwk2laanIQUmnOkf5l1ujkDhhaO7eC2wlEs59REGSiBnQUq0Lkt7SjNl1V0lsfl/exec?page=complaint&asset=${a.Asset_No}', '_blank')">Report Breakdown</button>
@@ -179,4 +163,5 @@ Html5Qrcode.getCameras().then(cams => {
 
 </body>
 </html>
+
 
